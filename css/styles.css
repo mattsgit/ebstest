@@ -39,3 +39,48 @@
     display: none;
   }
 }
+
+.header {
+  margin:200px
+}
+
+.marquee {
+    color: white;
+    text-shadow: 2px 2px #191970;
+    font-size: 250%;
+    font-weight: bold;
+    width: 800px;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;  /* show the marquee just outside the paragraph */
+    animation: marquee 7s linear;
+}
+
+.marquee span#quote1 {
+  line-height: 200px;
+}
+
+.marquee span#quote2 {
+    animation-delay: 7s;
+    line-height: 200px;
+}
+
+.marquee span#quote3 {
+    animation-delay: 14s;
+    line-height: 200px;
+}
+
+.marquee span:hover {
+    animation-play-state: paused
+}
+
+/* Make it move */
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
